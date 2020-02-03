@@ -27,6 +27,12 @@ git clone https://github.com/Lienol/openwrt-package.git package/openwrt-package
 #git clone https://github.com/Leo-Jo-My/luci-app-ssr-plus-Jo package/luci-app-ssr-plus-Jo
 git clone https://github.com/Flowers-in-thorns/luci-app-vssr-coexist.git package/luci-app-vssr-coexist
 
+# uci-app-diskman
+git clone https://github.com/lisaac/luci-lib-docker.git package/luci-lib-docker
+git clone https://github.com/lisaac/luci-app-dockerman.git package/luci-app-dockerman
+git clone https://github.com/lisaac/luci-app-diskman package/luci-app-diskman
+mkdir -p package/parted && cp -i package/luci-app-diskman/Parted.Makefile package/parted/Makefile
+
 
 
 #创建自定义配置文件 - OpenWrt-树莓派3b+
@@ -133,6 +139,7 @@ EOF
 # 常用LuCI插件选择:
 cat >> .config <<EOF
 CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Kcptun=y
+CONFIG_PACKAGE_luci-app-acme=y
 CONFIG_PACKAGE_luci-app-adbyby-plus=y
 CONFIG_PACKAGE_luci-app-transmission=y
 CONFIG_PACKAGE_luci-app-qbittorrent=y
@@ -156,6 +163,9 @@ CONFIG_PACKAGE_luci-app-zerotier=y
 #CONFIG_PACKAGE_luci-app-ssr-plus-Jo=y
 CONFIG_PACKAGE_luci-app-passwall=y
 CONFIG_PACKAGE_luci-app-vssr-coexist=y
+CONFIG_PACKAGE_luci-app-docker=y
+CONFIG_PACKAGE_luci-app-dockerman=y
+CONFIG_PACKAGE_luci-app-diskman=y
 CONFIG_LUCI_LANG_zh-tw=y
 CONFIG_LUCI_LANG_en=y
 EOF
