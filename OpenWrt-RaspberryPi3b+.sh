@@ -127,6 +127,7 @@ cat >> .config <<EOF
 CONFIG_PACKAGE_luci-app-serverchan=y
 CONFIG_PACKAGE_luci-app-adguardhome=y
 CONFIG_PACKAGE_luci-app-smartinfo=y
+CONFIG_PACKAGE_luci-app-smartdns=y
 EOF
 
 # ShadowsocksR插件:
@@ -169,7 +170,6 @@ CONFIG_PACKAGE_luci-app-dockerman=y
 CONFIG_PACKAGE_luci-app-diskman=y
 CONFIG_PACKAGE_luci-app-aria2=y
 CONFIG_PACKAGE_luci-app-samba4=y
-CONFIG_PACKAGE_luci-app-smartdns=y
 CONFIG_LUCI_LANG_zh-tw=y
 CONFIG_LUCI_LANG_en=y
 EOF
