@@ -8,7 +8,7 @@
 #=================================================
 
 # 定制默认IP
-sed -i 's/192.168.1.1/10.0.0.1/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/10.10.10.233/g' package/base-files/files/bin/config_generate
 
 # 替换默认Argon主题
 rm -rf package/lean/luci-theme-argon
