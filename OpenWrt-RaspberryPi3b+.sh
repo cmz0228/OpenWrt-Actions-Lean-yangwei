@@ -8,7 +8,7 @@
 #=================================================
 
 # 定制默认IP
-sed -i 's/192.168.1.1/10.0.0.1/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/10.10.10.233/g' package/base-files/files/bin/config_generate
 
 # 替换默认Argon主题
 rm -rf package/lean/luci-theme-argon
@@ -126,6 +126,7 @@ cat >> .config <<EOF
 CONFIG_PACKAGE_luci-app-serverchan=y
 CONFIG_PACKAGE_luci-app-adguardhome=y
 CONFIG_PACKAGE_luci-app-smartinfo=y
+CONFIG_PACKAGE_luci-app-smartdns=y
 EOF
 
 # ShadowsocksR插件:
@@ -164,8 +165,11 @@ CONFIG_PACKAGE_luci-app-zerotier=y
 CONFIG_PACKAGE_luci-app-passwall=y
 CONFIG_PACKAGE_luci-app-vssr-coexist=y
 CONFIG_PACKAGE_luci-app-docker=y
+CONFIG_PACKAGE_luci-lib-docker=y
 CONFIG_PACKAGE_luci-app-dockerman=y
 CONFIG_PACKAGE_luci-app-diskman=y
+CONFIG_PACKAGE_luci-app-aria2=y
+#CONFIG_PACKAGE_luci-app-samba4=y
 CONFIG_LUCI_LANG_zh-tw=y
 CONFIG_LUCI_LANG_en=y
 EOF
