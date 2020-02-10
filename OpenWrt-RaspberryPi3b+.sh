@@ -26,7 +26,6 @@ git clone https://github.com/Lienol/openwrt-package.git package/openwrt-package
 #git clone https://github.com/Flowers-in-thorns/my.git package/Flowers-in-thorns
 #git clone https://github.com/Leo-Jo-My/luci-app-ssr-plus-Jo package/luci-app-ssr-plus-Jo
 git clone https://github.com/Flowers-in-thorns/luci-app-vssr-coexist.git package/luci-app-vssr-coexist
-git clone https://github.com/pymumu/smartdns.git package/luci-app-smartdns
 
 # uci-app-diskman
 git clone https://github.com/lisaac/luci-lib-docker.git package/luci-lib-docker
@@ -166,6 +165,7 @@ CONFIG_PACKAGE_luci-app-zerotier=y
 CONFIG_PACKAGE_luci-app-passwall=y
 CONFIG_PACKAGE_luci-app-vssr-coexist=y
 CONFIG_PACKAGE_luci-app-docker=y
+CONFIG_PACKAGE_luci-lib-docker=y
 CONFIG_PACKAGE_luci-app-dockerman=y
 CONFIG_PACKAGE_luci-app-diskman=y
 CONFIG_PACKAGE_luci-app-aria2=y
