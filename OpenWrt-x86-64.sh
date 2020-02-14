@@ -27,10 +27,10 @@ git clone https://github.com/Lienol/openwrt-package.git package/openwrt-package
 git clone https://github.com/Flowers-in-thorns/luci-app-vssr-coexist.git package/luci-app-vssr-coexist
 
 # uci-app-diskman
-git clone https://github.com/lisaac/luci-lib-docker.git package/luci-lib-docker
-git clone https://github.com/lisaac/luci-app-dockerman.git package/luci-app-dockerman
-git clone https://github.com/lisaac/luci-app-diskman package/luci-app-diskman
-mkdir -p package/parted && cp -i package/luci-app-diskman/Parted.Makefile package/parted/Makefile
+#git clone https://github.com/lisaac/luci-lib-docker.git package/luci-lib-docker
+#git clone https://github.com/lisaac/luci-app-dockerman.git package/luci-app-dockerman
+#git clone https://github.com/lisaac/luci-app-diskman package/luci-app-diskman
+#mkdir -p package/parted && cp -i package/luci-app-diskman/Parted.Makefile package/parted/Makefile
 
 
 
@@ -161,10 +161,10 @@ CONFIG_PACKAGE_luci-app-filetransfer=y
 CONFIG_PACKAGE_luci-app-unblockmusic=y
 CONFIG_PACKAGE_luci-app-netdata=y
 CONFIG_PACKAGE_luci-app-vssr-coexist=y
-CONFIG_PACKAGE_luci-app-docker=y
-CONFIG_PACKAGE_luci-lib-docker=y
+#CONFIG_PACKAGE_luci-app-docker=y
+#CONFIG_PACKAGE_luci-lib-docker=y
 CONFIG_PACKAGE_luci-app-dockerman=y
-CONFIG_PACKAGE_luci-app-diskman=y
+#CONFIG_PACKAGE_luci-app-diskman=y
 CONFIG_PACKAGE_luci-app-aria2=y
 #CONFIG_PACKAGE_luci-app-samba4=y
 #CONFIG_PACKAGE_luci-app-minidlna=y
