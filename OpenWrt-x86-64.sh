@@ -166,8 +166,8 @@ CONFIG_PACKAGE_luci-app-vssr-coexist=y
 CONFIG_PACKAGE_luci-app-dockerman=y
 #CONFIG_PACKAGE_luci-app-diskman=y
 CONFIG_PACKAGE_luci-app-aria2=y
-CONFIG_PACKAGE_luci-app-samba4=y
-CONFIG_PACKAGE_luci-app-minidlna=y
+#CONFIG_PACKAGE_luci-app-samba4=y
+#CONFIG_PACKAGE_luci-app-minidlna=y
 CONFIG_LUCI_LANG_zh-tw=y
 CONFIG_LUCI_LANG_en=y
 EOF
