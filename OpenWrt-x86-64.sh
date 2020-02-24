@@ -23,7 +23,7 @@ git clone https://github.com/rufengsuixing/luci-app-adguardhome package/luci-app
 git clone https://github.com/kang-mk/luci-app-smartinfo package/luci-app-smartinfo
 git clone https://github.com/Lienol/openwrt-package.git package/openwrt-package
 #git clone https://github.com/Flowers-in-thorns/my.git package/Flowers-in-thorns
-git clone https://github.com/Leo-Jo-My/luci-app-ssr-plus-Jo package/luci-app-ssr-plus-Jo
+#git clone https://github.com/Leo-Jo-My/luci-app-ssr-plus-Jo package/luci-app-ssr-plus-Jo
 git clone https://github.com/Flowers-in-thorns/luci-app-vssr-coexist.git package/luci-app-vssr-coexist
 
 # uci-app-diskman
@@ -130,15 +130,19 @@ EOF
 
 # ShadowsocksR插件:
 cat >> .config <<EOF
+CONFIG_PACKAGE_luci-app-ssr-plus=y
 CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks=y
+CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Simple_obfs=y
+CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray_plugin=y
+CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray=y
+CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Trojan=y
+CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Kcptun=y
 CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Server=y
 CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Socks=y
-CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray=y
 EOF
 
 # 常用LuCI插件选择:
 cat >> .config <<EOF
-CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Kcptun=y
 CONFIG_PACKAGE_luci-app-acme=y
 CONFIG_PACKAGE_luci-app-transmission=y
 CONFIG_PACKAGE_luci-app-qbittorrent=y
@@ -187,6 +191,8 @@ CONFIG_PACKAGE_luci-app-passwall_INCLUDE_haproxy=y
 CONFIG_PACKAGE_luci-app-passwall_INCLUDE_ChinaDNS_NG=y
 CONFIG_PACKAGE_luci-app-passwall_INCLUDE_pdnsd=y
 CONFIG_PACKAGE_luci-app-passwall_INCLUDE_dns2socks=y
+CONFIG_PACKAGE_luci-app-passwall_INCLUDE_v2ray-plugin=y
+CONFIG_PACKAGE_luci-app-passwall_INCLUDE_simple-obfs=y
 EOF
 
 # LuCI主题:
